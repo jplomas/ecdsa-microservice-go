@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+</head>
+<body>
+<div>
+  <h1>ECDSA microservice</h1>
+  <form method="GET" action="/sk">
+    <input type="submit" value="new SK" />
+  </form>
+  <hr />
+  <form method="POST" action="/pk">     
+      <label>SK</label><input name="SK" type="text" value="" />
+      <input type="submit" value="get PK" />
+  </form>
+  <hr />
+  <form method="POST" action="/sign">     
+      <label>SK</label><input name="SK" type="text" value="" />
+      <label>Message</label><input name="Message" type="text" value="" />
+      <input type="submit" value="sign" />
+  </form>
+  <hr />
+  <form method="POST" action="/verify">     
+      <label>Message</label><input name="Message" type="text" value="" />
+      <br />
+      <label>PK.X</label><input name="X" type="text" value="" />
+      <label>PK.Y</label><input name="Y" type="text" value="" />
+      <br />
+      <label>Signature.R</label><input name="R" type="text" value="" />
+      <label>Signature.S</label><input name="S" type="text" value="" />
+      <input type="submit" value="verify" />
+  </form>
+</div>
+</body>
+</html>
